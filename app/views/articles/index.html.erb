@@ -25,9 +25,16 @@
     <% end %>
   </tbody>
 </table>
-<p>
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<p title='When Elon Musk unveiled the Hyperloop back in August'>
 When Elon Musk unveiled the Hyperloop back in August, his critics were quick to scoff at his proposal for a new, superfast mode of transporation. A number of people derided Musk’s white paper as cartoonish and vague. Musk vowed to prove the naysayers wrong by building an actual physical prototype, but that’s not expected to arrive for years.
-</p><p>
+</p>
+<div id='ken'></div>
+<p>
 Meanwhile, some evidence has just appeared that shows Musk may indeed be onto something. Ansys (ANSS), a maker of very high-end simulation software used to design planes, trains, automobiles and all manner of other things, has fed the Hyperloop specifications into a computer and come away impressed. “I don’t immediately see any red flags,” says Sandeep Sovani, the director of land transporation strategy at Ansys. “I think it is quite viable.”
 
 </p><p>
@@ -61,4 +68,17 @@ Sovani plans to keep tweaking the design of the Hyperloop pods in the software a
 
 <br>
 
+  <script>
+  $(function() {
+    $( document ).tooltip();
+  });
+
+  </script>
+  
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
 <%= link_to 'New Article', new_article_path %>
