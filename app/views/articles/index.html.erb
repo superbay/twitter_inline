@@ -1,0 +1,84 @@
+<h1>Listing articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Author</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.name %></td>
+        <td><%= article.content %></td>
+        <td><%= article.author %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<p title='When Elon Musk unveiled the Hyperloop back in August'>
+When Elon Musk unveiled the Hyperloop back in August, his critics were quick to scoff at his proposal for a new, superfast mode of transporation. A number of people derided Musk’s white paper as cartoonish and vague. Musk vowed to prove the naysayers wrong by building an actual physical prototype, but that’s not expected to arrive for years.
+</p>
+<div id='ken'></div>
+<p>
+Meanwhile, some evidence has just appeared that shows Musk may indeed be onto something. Ansys (ANSS), a maker of very high-end simulation software used to design planes, trains, automobiles and all manner of other things, has fed the Hyperloop specifications into a computer and come away impressed. “I don’t immediately see any red flags,” says Sandeep Sovani, the director of land transporation strategy at Ansys. “I think it is quite viable.”
+
+</p><p>
+Musk’s design called for an elevated tube to be built between two cities. Pods would be shot back and forth inside the tube at speeds reaching up to 800 miles per hour. Air bearings placed near the underside of the pods would create a cushion to reduce friction, and the pods would be accelerated by pulses from electric motors. To cut down on resistance, Musk proposed having vacuums at the front of the pods that would suck in air, while also having the tube in a low pressure state. The end result? A 30-minute ride from Los Angeles to San Francisco.
+
+</p><p>
+VIDEO: Breaking Down the Costs of Musk's Hyperloop
+Ansys studied Musk’s lengthy Hyperloop white paper. The company used the artists’ renderings in the document to create a virtual mockup of a pod and the tube that could be fed into simulation software. It then decided to study what the air pressure might look like on the pod and inside the tube and set a computer to work for a few hours to perform the neccessary calculations.
+
+</p><p>
+While Sovani found the overall design to be feasible, he does think the Hyperloop will need some tweaks. For one, instead of having the pods taper at the end, he thinks the pods should be cylindrical with a large jet engine-type contraption at the front to suck in the air. While a soup can-shaped pod might not look as cool, it would allow a more even distribution of air pressure across the outside of the pod and allow it to suck in more air. “In our opinion, it has to be very very symmetrical,” says Sovani.
+
+</p><p>
+Sovani also suggests that the air bearings do a better job of spreading air across the body of the pods and that there should even be bearings on the top of the vehicle. The Ansys simulation showed very uneven stress markings alongside the body of the pod. “We see a lot of shear stress areas,” Sovani says. “In something like an aircraft, the patterns would be very uniform.” Bearings on the top of the pod would help the device stay balanced during slight changes in air pressure.
+
+</p><p>
+VIDEO: Elon Musk's Hyperloop Is Full of Hot Air, Seriously
+Musk’s SpaceX uses the Ansys software, so Musk is familiar with this type of simulation technology. So, too, are thousands of companies that use software these days to design products from the ground up virtually before building physical protoypes.
+
+</p><p>
+Sovani plans to keep tweaking the design of the Hyperloop pods in the software and eventually to send Musk some suggestions.
+
+</p>
+
+
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<p><a href="https://twitter.com/intent/tweet?in_reply_to=51113028241989632&text=some Content some one consider">Reply</a></p>
+<p><a href="https://twitter.com/intent/retweet?tweet_id=51113028241989632">Retweet</a></p>
+<p><a href="https://twitter.com/intent/favorite?tweet_id=51113028241989632">Favorite</a></p>
+
+
+<br>
+
+  <script>
+  $(function() {
+    $( document ).tooltip();
+  });
+
+  </script>
+  
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+<%= link_to 'New Article', new_article_path %>
